@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onderzoek</title>
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <img id="navbar-logo" alt="Logo" class="navbar-logo">
+    <button id="hamburger-menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<div id="fullscreen-menu" class="fullscreen-menu">
+  <div class="menu-header">
+    <button id="close-menu" class="close-menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="menu-container">
+    <div class="menu-body">
+      <ul id="menu-links" class="menu-links"></ul>
+    </div>
+  </div>
+</div>
+
+  <div class="main-container">
+   
+    <div id="breadcrumbs"></div>
+    <h2>Onderzoek</h2>
+    <p>
+      Onderzoek biedt een solide basis voor de gestructureerde ontwikkeling van handelingsomgevingen met walletfunctionaliteiten, vertrouwensdiensten en het bijbehorende vertrouwensstelsel. 
+Door gericht te werken aan de verschillende aspecten zoals gebruikerservaring, ethiek, organisatie, juridische kaders, techniek en economische aspecten etc., kan er op een diepgaande en samenhangende manier worden gekeken naar belangrijke invalshoeken.
+Een gestructureerde bovenliggende agenda zorgt ervoor dat alle elementen in balans zijn en goed op elkaar aansluiten: een belangrijke voorwaarde voor een gebruiksvriendelijk en veilig ecosysteem.
+    </p>
+    <div class="search-container" role="search">
+      <input type="text" id="searchBar" placeholder="Zoek in onderzoeken...">
+    </div>
+    <p id="noResultsMessage" style="display:none;" aria-live="polite">Geen resultaten gevonden.</p>
+   
+    <section class="section-examples">
+      <div class="section-container">
+        <div class="section-image">
+          <img src="/assets/r-ipa.png" alt="afbeelding interactie patronen ">
+        </div>
+        <div class="section-content">
+          <h2>Onderzoek naar interactiepatronen</h2>
+          <p>Om digitale bewijzen op te halen en te delen is onderzoek naar interactiepatronen relevant. 
+            Om dit onderzoek inzichtelijk te maken, staat op de volgende pagina een lopend onderzoek naar een aantal interactiepatronen.
+          </p>
+          <a class="read-more-research" href="/research/ipa/index.html" aria-label="Bekijk onderzoek over interactiepatronen"><i class="fas fa-flask"></i> Bekijk onderzoek</a>
+        </div>
+      </div>
+    </section>   
+
+    <section class="section-examples">
+      <div class="section-container">
+        <div class="section-image">
+          <img src="/assets/r-agreements.png" alt="Afbeelding accepteren of weigeren voorwaardes ">
+        </div>
+        <div class="section-content">
+          <h2>Begrijpelijke verzoeken voor datadeling</h2>
+          <p>
+            Onderzoek naar social engineering en menselijk gedrag is essentieel om begrijpelijke verzoeken voor datadeling te ontwerpen. 
+            Dit onderzoek richt zich op hoe we gebruikers beter kunnen ondersteunen, en het risico op 'oversharing', misleidende technieken of cognitieve overbelasting kunnen verminderen.
+          </p>
+          <a class="read-more-research" href="/research/agreements/index.html" aria-label="Bekijk onderzoek over begrijpelijke data deel verzoeken">
+            <i class="fas fa-flask"></i> Bekijk onderzoek
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="../breadcrumbs.js"></script>
+  <script src="../accordeon.js"></script>
+  <script src="/menu.js"></script>
+
+  <script>
+    document.getElementById('searchBar').addEventListener('keyup', filterSections);
+
+    function filterSections() {
+      var input = document.getElementById('searchBar');
+      var filter = input.value.toUpperCase();
+      var sections = document.getElementsByClassName('section-examples');
+      var hasResults = false;
+
+      for (var i = 0; i < sections.length; i++) {
+        var txtValue = sections[i].textContent || sections[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          sections[i].style.display = "";
+          hasResults = true;
+        } else {
+          sections[i].style.display = "none";
+        }
+      }
+
+      document.getElementById('noResultsMessage').style.display = hasResults ? "none" : "block";
+    }
+
+    function filterByTag(tag) {
+      var input = document.getElementById('searchBar');
+      input.value = tag;
+      filterSections();
+    }
+  </script>
+
+</body>
+</html>

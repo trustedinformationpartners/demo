@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machtiging namens organisatie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="${baseUrl}/assets/fontawesome/css/all.min.css">
+</head>
+<body>
+    <section id="stap-1" class="stap">
+        <div class="subsection">
+            <h1>Intro demo</h1>
+            <hr>
+            <h3>Digitale machtiging om te mogen handelen namens een organisatie</h3>
+            <p>
+                In deze demo vraagt Willeke als financieel medewerker een digitale machtiging aan haar werkgever om namens het bedrijf omzetbelasting te kunnen aangeven.
+            <br>Ze zal hierbij inloggen in het Machtigingen Register en een machtiging aanvragen bij de bevoegd vertegenwoordigers.
+            </p>
+                <h4>Handelingsomgeving openen</h4>
+
+                Volg onderstaande stappen:
+                <ol class="steps-list">
+                  <li>Open de handelingsomgeving door op je mobiele telefoon naar <span class="highlight-link">${baseUrl}/demo</span> te gaan.</li>
+                  <li>Na inloggen, klik op scan QR zodra dit gevraagd wordt in de volgende stappen.</li>
+                </ol>
+                
+               
+                
+              <h4>Stappen in demo</h4>
+              <p>
+                De stappen in de demo kun je bedienen door onderstaande knoppen.
+            </p>
+
+               
+            <hr>
+        </div>
+        <div class="button-container">
+            <button class="next">Volgende</button>
+        </div>
+    </section>
+
+    <section id="stap-2" class="stap">
+        <div class="subsection">
+            <div id="logo-container-machtigingen-register">
+                <h1 class="machtigingen-register-title">
+                    <span class="machtigingen">Machtigingen</span> <span class="register">Register</span>
+                </h1>
+            </div>
+            <hr>
+            <h2>Inloggen</h2>
+
+            <div class="login-container">
+                <div class="login-block">
+                    <div class="login-block1">
+                    <h3>Inloggen</h3>
+                    <form>
+                        <label for="username">Gebruikersnaam</label>
+                        <input type="text" id="username" name="username" placeholder="Vul hier uw gebruikersnaam in"  autocomplete="current-username" required>
+                        
+                        <label for="password">Wachtwoord</label>
+                        <input type="password" id="password" name="password" placeholder="Vul hier uw wachtwoord in"  autocomplete="current-password" required>
+    
+                        <button type="submit" class="login-button">Inloggen</button>
+                    </form>
+                    <div class="or-divider">
+                        <span>of</span>
+                </div>
+                    </div>
+                    <button class="login-button fa-button handelingsomgeving-button1">
+                        <i class="fas fa-mobile-alt"></i> Inloggen met handelingsomgeving
+                    </button>
+                        <div id="qr-code-container1" class="qr-code-container1" style="display: none;">
+                            <div class="qr-code-instructions">
+                                <p>Scan de QR-code met uw handelingsomgeving om verder te gaan:</p>
+                            </div>
+                            <div class="qr-code">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?data=%7B%22type%22%3A%22verifier%22%2C%22requester%22%3A%22Machtigingen%20Register%22%2C%22reason%22%3A%22Inloggen%22%2C%22rdfcv%22%3A%5B%22Toegang%20Machtigingen%20Register%22%5D%2C%22a%22%3A%22w%22%2C%22t%22%3A%22w%22%7D&size=300x300" 
+                                    alt="QR Code voor Inloggen Machtigingen Register">
+                            </div>
+                        </div>
+                </div>
+
+                <div class="new-customer-block1">
+                    <h3>Nieuwe klant</h3>
+                    <p>Bent u nog geen klant? Maak eenvoudig een account aan.</p>
+                    <button class="login-button register-button">Registreren</button>
+                </div>
+            </div>
+
+            <div class="button-container1" style="display: none;">
+                <button class="prev">Terug</button>
+                <button class="next" data-go-step="5">Volgende</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="stap-3" class="stap">
+        <div class="subsection">
+            <div id="logo-container-machtigingen-register">
+                <h1 class="machtigingen-register-title">
+                    <span class="machtigingen">Machtigingen</span> <span class="register">Register</span>
+                </h1>
+            </div>
+            <hr>
+            <h2>Identificeren</h2>
+    
+            <p id="identification-text">
+                Om uw identiteit te bevestigen, verzoeken wij u om onderstaande QR-code te scannen met uw <strong>handelingsomgeving</strong> (${baseUrl}/demo). 
+                Dit proces is verplicht om u aan te melden bij het Machtigingen Register.
+            </p>
+    
+            <div class="qr-code-container">
+                <div class="qr-code-instructions">
+                    <p>Scan de QR-code met uw handelingsomgeving om verder te gaan:</p>
+                </div>
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=%7B%22type%22%3A%22verifier%22%2C%22requester%22%3A%22Machtigingen%20Register%22%2C%22reason%22%3A%22Identificatieplicht%20aanmelding%20Machtigingen%20Register%22%2C%22rdfcv%22%3A%5B%22gn%22%2C%22sn%22%2C%22bsn%22%5D%2C%22a%22%3A%22w%22%2C%22t%22%3A%22w%22%7D&size=300x300" 
+                         alt="QR Code voor Identificatieplicht aanmelding Machtigingen Register">
+                </div>
+            </div>
+    
+            <p id="qr-footer-text">
+                Heeft u problemen met scannen? Neem contact op met onze klantenservice voor verdere assistentie.
+            </p>
+    
+            <div class="button-container">
+                <button class="prev">Terug</button>
+                <button class="next">Volgende</button>
+            </div>
+        </div>
+    </section>
+    
+                
+    <section id="stap-4" class="stap">
+                <div class="subsection">
+                    <div id="logo-container-machtigingen-register">
+                        <h1 class="machtigingen-register-title">
+                            <span class="machtigingen">Machtigingen</span> <span class="register">Register</span>
+                        </h1>
+                    </div>
+                    <hr>
+                    <h2>Uitgifte inlog attribuut</h2>
+            
+                    <p id="identification-text">
+                        Hierbij ontvangt u uw inlog attribuut om in de toekomst te kunnen inloggen bij het Machtigingen Register. Om uw inlog attribuut op te slaan scant u onderstaande QR code met uw <strong>handelingsomgeving</strong> (${baseUrl}/demo). 
+                        Dit proces is verplicht om u aan te melden bij het Machtigingen Register.
+                    </p>
+            
+                    <div class="qr-code-container">
+                        <div class="qr-code-instructions">
+                            <p>Scan de QR-code met uw handelingsomgeving om verder te gaan:</p>
+                        </div>
+                        <div class="qr-code">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?data=%7B%22Issuer%22%3A%20true%2C%20%22name%22%3A%20%22Toegang%20Machtigingen%20Register%22%2C%20%22issuedBy%22%3A%20%22Machtigingen%20Register%22%2C%20%22LEID%22%3A%20%22NL_KVK_0000000%22%2C%20%22Issued_to_subject%22%3A%20%22Willeke%20Liselotte%20de%20Bruijn%22%2C%20%22Login_ID%22%3A%20%22WLdB%40platform%20%22%2C%20%22Issued_Date%22%3A%20%222025-01-14%22%2C%20%22Geldigheidsduur%22%3A%20%2212%20maanden%22%2C%20%22Intrekbaar%22%3A%20%22Ja%22%2C%20%22rdfci%22%3A%20%5B%5D%2C%20%22a%22%3A%20%22w%22%2C%20%22t%22%3A%20%22w%22%7D&size=300x300" 
+                                 alt="QR Code voor uitgifte inlog-attribuut Toegang Machtigingen Register">
+                        </div>
+                    </div>
+            
+                    <p id="qr-footer-text">
+                        Heeft u problemen met scannen? Neem contact op met onze klantenservice voor verdere assistentie.
+                    </p>
+                      
+                    </div>
+                    <div class="button-container">
+                        <button class="prev">Terug</button>
+                        <button class="next">Volgende</button>
+                    </div>
+    </section>
+
+    <section id="stap-5" class="stap">
+                    <div class="subsection">
+                        <div id="logo-container-machtigingen-register">
+                            <h1 class="machtigingen-register-title">
+                                <span class="machtigingen">Machtigingen</span> <span class="register">Register</span>
+                            </h1>
+                        </div>
+                        <hr>
+                        <h2>Aanvraag machtiging</h2>
+                        <p>Beste aanvrager, <br>
+                            Volg onderstaande stappen om een aanvraag om een machtiging te voltooien. </p>
+                
+                        <hr>
+                        <h2>Organisatie ID</h2>
+                        <p>Ik wil een machtiging namens de volgende organisatie aanvragen:</p>
+                        <form>
+                            <table>
+                                <tr>
+                                    <td><label for="organisatie-type">Type Organisatie ID:</label></td>
+                                    <td>
+                                        <div style="display: flex; align-items: center;">
+                                            <select id="organisatie-type" name="organisatie-type" onchange="toggleCustomTypeInput()">
+                                                <option value="KvKnummer" selected>KvK nummer</option>
+                                                <option value="ProbasNr">Probas Nummer</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                            <div id="custom-type-container" style="display: none; margin-left: 10px;">
+                                                <label for="custom-type">Ander type:</label>
+                                                <input type="text" id="custom-type" name="custom-type" placeholder="Bijv. organisatiecode">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="organisatie-id">Organisatie ID:</label></td>
+                                    <td>
+                                        <input type="text" id="organisatie-id" name="organisatie-id" placeholder="Vul hier de waarde in" value="KVK_NL_00000000">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="organisatie-naam">Naam organisatie:</label></td>
+                                    <td>
+                                        Innovatiemakers bv.
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                        <hr>
+                
+                        <h2>Bevoegdheid</h2>
+                        <p>Als persoon ben ik:</p>
+                        <form>
+                           
+                            <label>
+                                <input type="checkbox" name="dienst" value="niet bevoegd" class="exclusive" checked>
+                                niet onbeperkt bevoegd voor deze organisatie
+                            </label><br>
+
+                            <label>
+                                <input type="checkbox" name="dienst" value="wel bevoegd" class="exclusive">
+                                wel onbeperkt bevoegd voor deze organisatie
+                            </label><br>
+                    
+                        </form>
+                        
+                        <hr>
+                
+                        <h2>Bevoegd vertegenwoordiger(s)</h2>
+                        <p>Bent u geen onbeperkt bevoegd vertegenwoordiger namens de organisatie?
+                            <br>Geef de e-mailadressen op van de bevoegd vertegenwoordiger(s). 
+                            <br><strong>Belangrijk:</strong> In geval van gedeelde bevoegdheden moeten alle e-mailadressen opgegeven worden.</p>
+                    
+                        <form id="email-form">
+                            <table id="email-table">
+                                <tbody>
+                                    <tr id="email-row-1">
+                                        <td>
+                                            <label for="email-1">E-mailadres bevoegd vertegenwoordiger:</label>
+                                            <select name="naam-1" id="naam-1" style="margin-left: 10px;">
+                                                <option value="Henk" selected>Henk Janssen</option>
+                                                <option value="Marjolein">Marjolein de Boer</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="email" id="email-1" name="email-1" value="Henk-dir@innovatiemakers.domein" placeholder="Vul een e-mailadres in">
+                                        </td>
+                                    </tr>
+                                    <tr id="email-row-2">
+                                        <td>
+                                            <label for="email-2">E-mailadres bevoegd vertegenwoordiger:</label>
+                                            <select name="naam-2" id="naam-2" style="margin-left: 10px;">
+                                                <option value="Henk">Henk Janssen</option>
+                                                <option value="Marjolein" selected>Marjolein de Boer</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="email" id="email-2" name="email-2" value="Marjolein-dir@innovatiemakers.domein" placeholder="Vul een e-mailadres in">
+                                        </td>
+                                    </tr>
+                                    <tr id="add-email-row">
+                                        <td></td>
+                                        <td>
+                                            <button type="button" id="add-email-button">Voeg nog een e-mailadres toe</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    
+                        <hr>
+                    </div>
+           
+                
+
+
+<h2>Selectie Dienst en Dienstverlener</h2>
+<p> Hieronder kunt u een machtiging voor een dienst aanvragen. Selecteer die dienst(en) en ga naar volgende stap.
+                    
+                <form>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dienst</th>
+                                <th>Dienstverlener</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="omzetbelasting" checked>
+                                        Omzetbelasting (btw)
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="loonheffingen">
+                                        Loonheffingen
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="vennootschapsbelasting">
+                                        Vennootschapsbelasting
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="bankrekeningnummers_ondernemer">
+                                        Bankrekeningnummers ondernemer
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="beheer_contactgegevens">
+                                        Beheer contactgegevens
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="intermediairdienst">
+                                        Intermediairdienst
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="verhuurderheffing">
+                                        Verhuurderheffing
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="gegevensaanlevering_fatca_crs">
+                                        Gegevensaanlevering FATCA/CRS
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="aanmeldportaal_cbc_reporting">
+                                        Aanmeldportaal notificatie voor CBC Reporting
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="gegevensaanlevering_verzekeringsproducten">
+                                        Gegevensaanlevering verzekeringsproducten
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="dienst" value="gegevensaanlevering_wagenpark">
+                                        Gegevensaanlevering wagenpark
+                                    </label>
+                                </td>
+                                <td>Belastingdienst</td>
+                            </tr>
+                        </tbody>
+                    </table>
+               
+                </form>
+                <hr>
+        </div>
+        <div class="button-container">
+            <button class="prev">Terug</button>
+            <button class="next">Volgende</button>
+        </div>
+    </section>
+
+    <section id="stap-6" class="stap">
+        <div class="subsection">
+            <div id="logo-container-machtigingen-register">
+                <h1 class="machtigingen-register-title">
+                    <span class="machtigingen">Machtigingen</span> <span class="register">Register</span>
+                </h1>
+            </div>
+              <h3>Verwerking aanvraag</h3>
+            <hr>
+            <p> Uw aanvraag wordt in behandeling genomen.</p>
+        </div>
+        
+       
+        <div class="button-container">
+            <button class="prev">Terug</button>
+            <button class="next">Volgende</button>
+        </div>
+    </section>
+
+
+    <section id="stap-7" class="stap">
+        <div class="subsection">
+            <div>
+                <h1>Toelichting verwerking</h1>
+            </div>
+              <h3>Verwerking aanvraag</h3>
+            <hr>
+            <p>Om de aanvraag goed te keuren ontvangen de bevoegd vertegenwoordigers een bericht om de aanvraag te beoordelen.
+            <br> Hierbij moeten alle bevoegd vertegenwoordigers zich aanmelden, een bewijs van bevoegdheid kunnen overleggen, die vervolgens gevalideerd worden. 
+            </p>
+        </div>
+        
+       
+        <div class="button-container">
+            <button class="prev">Terug</button>
+            <button class="next">Volgende</button>
+        </div>
+    </section>
+
+
+    <section id="stap-8" class="stap">
+        <div class="subsection">
+            <div class="logo-container">
+            <h2>Email</h2>
+        </div>
+            <div id="email-container">
+                <div id="email-meta">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="meta-label">Aan:</td>
+                                <td class="meta-value">Willeke de Bruijn</td>
+                            </tr>
+                            <tr>
+                                <td class="meta-label">Afzender:</td>
+                                <td class="meta-value">Machtigingen Register</td>
+                            </tr>
+                            <tr>
+                                <td class="meta-label">Onderwerp:</td>
+                                <td class="meta-value">Uitgifte digitale machtiging namens organisatie toegekend</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              
+                <div id="email-header">
+                    <h4 id="email-title">Uitgifte digitale machtiging namens organisatie toegekend</h4>
+                </div>
+                <p id="email-intro">
+                    Beste Willeke,<br><br>
+                    Uw organisatie heeft uw aanvraag voor een machtiging goedgekeurd voor:
+                </p>
+                <form>
+                    <ul id="email-list">
+                        <li name="dienst" value="omzetbelasting">Omzetbelasting (btw)</li>
+                    </ul>
+                </form>
+                <hr id="email-divider">
+                <p id="email-footer">
+                    U kunt de machtiging ophalen in het Machtigingen Register en deze toevoegen in uw handelingsomgeving.
+                </p>
+            </div>
+            <div class="button-container">
+                <button class="prev">Terug</button>
+                <button class="next">Volgende</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="stap-9" class="stap">
+        <div class="subsection">
+            <div id="logo-container-machtigingen-register">
+                <h1 class="machtigingen-register-title">
+                    <span class="machtigingen">Machtigingen</span> <span class="register">Register</span>
+                </h1>
+            </div>
+            <hr>
+            <h2>Inloggen</h2>
+
+            <div class="login-container">
+                <div class="login-block">
+                    <div class="login-block2">
+                    <h3>Inloggen</h3>
+                    <form>
+                        <label for="username">Gebruikersnaam</label>
+                        <input 
+                        type="text" 
+                        id="username1" 
+                        name="username" 
+                        autocomplete="username"
+                        placeholder="Vul hier uw gebruikersnaam in" 
+                        required
+                        >
+                        
+                        <label for="password">Wachtwoord</label>
+                        <input 
+                        type="password" 
+                        id="password2" 
+                        name="password" 
+                        autocomplete="current-password"
+                        placeholder="Vul hier uw wachtwoord in" 
+                        required
+                        >
+    
+                        <button type="submit" class="login-button">Inloggen</button>
+                    </form>
+                    <div class="or-divider">
+                        <span>of</span>
+                </div>
+                    </div>
+                    <button class="login-button fa-button handelingsomgeving-button2">
+                        <i class="fas fa-mobile-alt"></i> Inloggen met handelingsomgeving
+                    </button>
+                        <div id="qr-code-container2" class="qr-code-container2" style="display: none;">
+                            <div class="qr-code-instructions">
+                                <p>Scan de QR-code met uw handelingsomgeving om verder te gaan:</p>
+                            </div>
+                            <div class="qr-code">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?data=%7B%22type%22%3A%22verifier%22%2C%22requester%22%3A%22Machtigingen%20Register%22%2C%22reason%22%3A%22Inloggen%22%2C%22rdfcv%22%3A%5B%22Toegang%20Machtigingen%20Register%22%5D%2C%22a%22%3A%22w%22%2C%22t%22%3A%22w%22%7D&size=300x300" 
+                                    alt="QR Code voor Inloggen Machtigingen Register">
+                            </div>
+                        </div>
+                </div>
+
+                <div class="new-customer-block2">
+                    <h3>Nieuwe klant</h3>
+                    <p>Bent u nog geen klant? Maak eenvoudig een account aan.</p>
+                    <button class="login-button ">Registreren</button>
+                </div>
+            </div>
+
+            <div class="button-container2" style="display: none;">
+                <button class="prev">Terug</button>
+                <button class="next" data-go-step="10">Volgende</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="stap-10" class="stap">
+         
+        <div class="subsection">
+            <div id="logo-container-machtigingen-register">
+                <h1 class="machtigingen-register-title">
+                    <span class="machtigingen">Machtigingen</span> <span class="register">Register</span>
+                </h1>
+            </div>
+            <hr>
+            <h4>Uitgifte digitale machtiging namens organisatie toegekend</h4>
+            <p>Beste Willeke,<br>
+                
+                Uw organisatie heeft uw aanvraag voor een machtiging goedgekeurd voor:<br>
+                <form>
+                    
+                    <ul>
+                        <li name="dienst" value="omzetbelasting">
+                        Omzetbelasting (btw)
+                    </li>
+                    </ul><br>
+            </form>
+                <hr>
+            U kunt de machtiging in uw handelingsomgeving toevoegen door onderstaande QR code met uw handelingsomgeving te scannen.
+            <p>Scan onderstaande QR code <strong>met je handelingsomgeving</strong> (${baseUrl}/demo) om je digitale machtiging te ontvangen.</p>
+
+
+          
+            <div class="qr-code">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?data=%7B%22Issuer%22%3Atrue%2C%22name%22%3A%22MBO%22%2C%22issuedBy%22%3A%22MR%22%2C%22LEID%22%3A%22KVK0%22%2C%22Namens%22%3A%22IV%22%2C%22NLEID%22%3A%22KVK1%22%2C%22Issued_to_subject%22%3A%22WLDB%22%2C%22bsn%22%3A%22999999990%22%2C%22Dienstverlener%22%3A%22BD%22%2C%22Dienst%22%3A%22BTW%22%2C%22LOA%22%3A%22LoA%20High%22%2C%22ID%22%3A%222024-11-08%22%2C%22Geldigheidsduur%22%3A%226%20maanden%22%2C%22Intrekbaar%22%3A%22Ja%22%2C%22rdfci%22%3A%5B%5D%2C%22a%22%3A%22w%22%2C%22t%22%3A%22w%22%7D&size=300x300" 
+                     alt="Uitgifte attribuut machtiging Omzetbelasting (btw)">
+            </div>
+
+        </p>
+        </div>
+
+        <div class="button-container">
+            <button class="prev">Terug</button>
+            <button class="next">Volgende</button>
+        </div>
+    </section>
+
+    <section id="stap-11" class="stap">
+      
+            <div class="logo-container" id="logo-container-justis">
+                <div class="header-logo"></div>
+                <div class="header-text">Belastingdienst</div>
+              </div>
+
+
+              <div class="bd-navbar">
+                <div class="bd-navbar-left">
+                    <a  class="bd-nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a class="bd-nav-link"><i class="fas fa-bars"></i> Menu</a>
+                </div>
+             
+                <div class="bd-navbar-right">
+                    <div class="bd-search-bar">
+                        <input type="text" class="bd-search-input" placeholder="Waar bent u naar op zoek?">
+                        <button class="bd-search-button"><i class="fas fa-search"></i></button>
+                    </div>
+                    <a class="bd-nav-link"><i class="fas fa-user"></i> Inloggen</a>
+                </div>
+            </div>
+            
+            <div class="bd-header-divider"></div>
+            <div class="bd-divider-high"></div>
+      
+    
+        <div class="subsection">
+            
+            <h2 id="bd-subtitle">Inloggen namens organisatie</h2>
+    
+            <p id="bd-instructions">
+                Open de handelingsomgeving op uw telefoon (<a href="${baseUrl}/demo">${baseUrl}/demo</a>). <br>
+                Zodra u de handelingsomgeving op uw telefoon heeft geopend, 
+                scan dan onderstaande QR-code <strong>met uw handelingsomgeving</strong> om in te loggen.<br>
+            </p>
+            <div id="bd-qr-code">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?data=%7B%22type%22%3A%22verifier%22%2C%22requester%22%3A%22Belastingdienst%22%2C%22reason%22%3A%22Inloggen%20namens%20organisatie%22%2C%22rdfcv%22%3A%5B%22gn%22%2C%22sn%22%2C%22bsn%22%2C%22Machtiging%20%7C%20Belastingdienst%20%7C%20Omzetbelasting%22%5D%2C%22a%22%3A%22w%22%2C%22t%22%3A%22w%22%7D&size=300x300" 
+                     alt="QR Code voor Inloggen bij Belastingdienst met machtiging dienst Omzetbelasting (btw) namens organisatie">
+              </div>
+           
+        </div>
+    
+        <div class="bd-footer">
+            <div class="bd-footer-column">
+                <h4>Over de Belastingdienst</h4>
+                <ul>
+                    <li><a >Contact</a></li>
+                    <li><a>Over ons</a></li>
+                    <li><a >Werken bij de Belastingdienst</a></li>
+                </ul>
+            </div>
+            <div class="bd-footer-column">
+                <h4>Inloggen</h4>
+                <ul>
+                    <li><a >Inloggen op Mijn Belastingdienst</a></li>
+                    <li><a >Inloggen op Mijn Toeslagen</a></li>
+                    <li><a >Inloggen voor ondernemers</a></li>
+                    <li><a >Inloggen voor douanezaken</a></li>
+                </ul>
+            </div>
+            <div class="bd-footer-column">
+                <h4>Over deze site</h4>
+                <ul>
+                    <li><a >Sitemap</a></li>
+                    <li><a >Help</a></li>
+                </ul>
+            </div>
+            <div class="bd-footer-column">
+                <h4>Language</h4>
+                <ul>
+                    <li><a >English</a></li>
+                    <li><a >Deutsch</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="button-container">
+            <button class="prev">Terug</button>
+            <button class="next">Volgende</button>
+        </div>
+    </section>
+    
+
+    <section id="stap-12" class="stap">
+        <div class="logo-container" id="logo-container-justis">
+            <div class="header-logo"></div>
+            <div class="header-text">Belastingdienst</div>
+        </div>
+    
+        <div class="bd-navbar">
+            <div class="bd-navbar-left">
+              
+                <a class="bd-nav-link"><i class="fas fa-bars"></i> Menu</a>
+            </div>
+            <div class="bd-navbar-right">
+               
+                <a class="bd-nav-link"><i class="fas fa-user"></i> W. de Bruijn</a>
+            </div>
+        </div>
+    
+        <div class="bd-header-divider"></div>
+        <div class="bd-divider-high"></div>
+    
+        <div class="subsection omzetbelasting">
+            <h2>Omzetbelasting</h2>
+            <h3>Innovatiemakers</h3>
+            <ul class="horizontal-list">
+                <li>2024</li>
+                <li>2023</li>
+                <li>2022</li>
+                <li>2021</li>
+                <li>2020</li>
+                <li>2019</li>
+                <li>2018</li>
+            </ul>
+            <div class="vertical-list">
+                <div class="quarter">Aangifte Q1 - 2024</div>
+                <div class="quarter">Aangifte Q2 - 2024</div>
+                <div class="quarter">Aangifte Q3 - 2024</div>
+                <div class="quarter">Aangifte Q4 - 2024</div>
+            </div>
+        </div>
+        
+        <div class="bd-footer white">
+            <div class="bd-footer-column">
+                <h4>Over de Belastingdienst</h4>
+                <ul>
+                    <li><a >Contact</a></li>
+                    <li><a>Over ons</a></li>
+                    <li><a >Werken bij de Belastingdienst</a></li>
+                </ul>
+            </div>
+            <div class="bd-footer-column">
+                
+            </div>
+            <div class="bd-footer-column">
+                <h4>Over deze site</h4>
+                <ul>
+                    <li><a >Sitemap</a></li>
+                    <li><a >Help</a></li>
+                </ul>
+            </div>
+            <div class="bd-footer-column">
+                <h4>Language</h4>
+                <ul>
+                    <li><a >English</a></li>
+                    <li><a >Deutsch</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="button-container">
+            <button class="prev">Terug</button>
+            <button class="next">Volgende</button>
+        </div>
+    </section>
+    
+    <section id="stap-13" class="stap">
+        <div class="subsection">
+            <h1>Einde demo</h1>
+            <hr>
+            <h4><strong>Demo afgerond</strong></h4>
+            <p>De demo is hierbij afgerond.</p>
+        </div>
+        <div class="button-container">
+            <button class="prev">Terug</button>
+            <button class="next">Volgende</button>
+        </div>
+    </section>
+
+    <section id="stap-14" class="stap">
+        <div class="subsection">
+            <h1>test</h1>
+            <hr>
+            <h4><strong>test</strong></h4>
+            <p>test tekst</p>
+        </div>
+        <div class="button-container">
+            <button class="prev">Terug</button>
+            <button class="next">Volgende</button>
+        </div>
+    </section>
+
+    <section id="stap-15" class="stap">
+        <div class="subsection">
+            <h1>test</h1>
+            <hr>
+            <h4><strong>test</strong></h4>
+            <p>test tekst</p>
+        </div>
+        <div class="button-container">
+            <button class="prev">Terug</button>
+        </div>
+    </section>
+
+    <script src="demo.js"></script>
+    <script>
+        const exclusiveCheckboxes = document.querySelectorAll('input.exclusive[type="checkbox"]');
+        
+        exclusiveCheckboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    const name = checkbox.getAttribute('name');
+                    const checkboxes = document.querySelectorAll(`input.exclusive[name="${name}"]`);
+                    checkboxes.forEach((cb) => {
+                        if (cb !== checkbox) {
+                            cb.checked = false;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+<script>
+    function toggleCustomTypeInput() {
+        const organisatieType = document.getElementById('organisatie-type').value;
+        const customTypeContainer = document.getElementById('custom-type-container');
+
+        if (organisatieType === 'Other') {
+            customTypeContainer.style.display = 'flex';
+        } else {
+            customTypeContainer.style.display = 'none';
+        }
+    }
+</script>
+<script>
+    let emailCount = 1;
+
+    document.getElementById('add-email-button').addEventListener('click', () => {
+        emailCount++;
+        const emailTable = document.getElementById('email-table').querySelector('tbody');
+        const addEmailRow = document.getElementById('add-email-row');
+
+        if (!addEmailRow || !emailTable.contains(addEmailRow)) {
+            return;
+        }
+
+        const emailRow = document.createElement('tr');
+        emailRow.id = `email-row-${emailCount}`;
+
+        const labelCell = document.createElement('td');
+        const label = document.createElement('label');
+        label.setAttribute('for', `email-${emailCount}`);
+        label.innerText = `E-mailadres bevoegd vertegenwoordiger:`;
+        labelCell.appendChild(label);
+
+        const inputCell = document.createElement('td');
+        const input = document.createElement('input');
+        input.setAttribute('type', 'email');
+        input.setAttribute('id', `email-${emailCount}`);
+        input.setAttribute('name', `email-${emailCount}`);
+        input.setAttribute('placeholder', 'Vul een e-mailadres in');
+        inputCell.appendChild(input);
+
+        emailRow.appendChild(labelCell);
+        emailRow.appendChild(inputCell);
+
+        emailTable.insertBefore(emailRow, addEmailRow);
+    });
+</script>
+</body>
+</html>
